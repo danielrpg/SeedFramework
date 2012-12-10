@@ -1,5 +1,6 @@
 <?php
 ob_start();
+// Este es un cambio
 //require_once 'app/controller/UsersController.php';
 require_once 'app/view/IndexView.php';
 /**
