@@ -10,17 +10,7 @@ $(document).ready(function(){
                
 });
 
-/*
- * Esta es la clase home 
- * 
- **/
 function Home(){
-    
-    
-   /*
-   * Este es el estilo de la pagina para que se pueda 
-   * 
-   */
    this.init=function(){
        
          var x=$('#login');
@@ -64,19 +54,14 @@ function Home(){
        /*$('#btn_enviar').click(this.notIn);*/
    }
 
-    /*
-     * Esta s la funcion que inicializa la funcion notIn
-     */
+
 
     this.notIn = function(){
     
         $('#login').effect('shake');
     
     }
-    
-    /*
-     *Este es el metodo que te permite ingresar al sistema
-     */
+
     this.enterSystem = function(){
         
         

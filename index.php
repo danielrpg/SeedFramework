@@ -1,7 +1,8 @@
 <?php
 ob_start();
-// Este es un cambio
-//require_once 'app/controller/UsersController.php';
+// Require all files and classes
+require_once 'app/controller/UsersController.php';
+require_once 'app/controller/ClientController.php';
 require_once 'app/view/IndexView.php';
 /**
  * Description of index
@@ -10,7 +11,7 @@ require_once 'app/view/IndexView.php';
  */
 class Index {
     /*
-     * Este es el metodo que ejecuta la aplicación
+     * Method main application
      */
     public function run($page){
   	  switch ($page) {
@@ -18,9 +19,13 @@ class Index {
   			  $users = new UsersController();
          	$users->runIndex();
   			  break;
+        case 'clients':
+          $client_controller = new ClientController();
+          $client_controller->runIndex();
+          break;
   		  default:
-          $home_view = new HomeView();
-          $home_view->runIndex();  
+          $index_view = new IndexView();
+          $index_view->runIndex();  
           break;
   	  }   
     }

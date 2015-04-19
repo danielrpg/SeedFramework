@@ -1,12 +1,7 @@
 <?php
-// Estas son las librerias que se necesita para poder ejecutar el home
+// require all Classes here 
 require_once 'app/model/User.php';
-require_once 'app/view/HomeView.php';
-
-// Este es el modelo de la lista de usuarios
-require_once 'app/model/Client.php';
 require_once 'app/view/ClientsView.php';
-
 
 /**
  * Description of Router
@@ -16,16 +11,11 @@ require_once 'app/view/ClientsView.php';
 class UsersController {
     
     private $action;
-    /*
-     * Este es el metodo constructor para el proyecto
-     */
+
     public function __construct() {
         
     }
     
-    /*
-     * Esta es la funcion que ejecuta y redirecciona la solicitud  que se haga
-     */
     public function runIndex(){
         
         $action = $_GET['action'];

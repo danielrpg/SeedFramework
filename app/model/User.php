@@ -1,5 +1,4 @@
 <?php
-
 require_once 'app/core/Mysql.php';
 /**
  * Description of HomeModel
@@ -7,18 +6,11 @@ require_once 'app/core/Mysql.php';
  * @author Daniel Fernandez
  */
 class User {
-    
-    /*
-     * Este es el constructo de del modelo HomeModel
-     */
+
     public function __construct() {
         
     }
-    
-    /*
-     * Este es el metodo que verifica 
-     * @return boolean si exite o no en la base de datos
-     */
+
     public function verifyUser($user,$password){
               
        // $query = "SELECT * FROM users WHERE login='$user' AND password='$password' AND status=1";
@@ -32,7 +24,7 @@ class User {
         
         $mysql = new Mysql();
 		
-	$users = $mysql->query($query);
+	    $users = $mysql->query($query);
 
         if($users[0]['u']['idUser'] != 0){
             
@@ -69,9 +61,7 @@ class User {
         
     }
     
-    /*
-     * Esta es la funcion que cierra la session
-     */
+
     public function logout_user(){
         
         session_start();
@@ -82,10 +72,7 @@ class User {
         
         header('Location: ?action=');
     }
-    
-    /*
-     * Esta es la funcion que verifica la session del usuario
-     */
+
     
     public function verifySession(){
         
@@ -101,9 +88,6 @@ class User {
         return $res_session;
     }
     
-    /*
-     * Esta es la funcion que crea la session
-     */
     public function iniSession($user, $password){
         
         session_start();

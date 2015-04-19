@@ -5,25 +5,24 @@
  *
  * @author Daniel
  */
-class HomeView {
-    // Este es el atributo que crea el template de la vista
+class IndexView {
+    // This is the attribute template
     private $template;
     
     /*
-     * Este es el metodo constructor de la clase HomeView
+     * constructor
      */
     public function __construct() {
-        // Aqui todo lo que se define para este constructor
+        //Constructor statement here
     }
     
     /*
-     * Este es el metodo que ejecuta el template de la vista
+     * This is the main function
      */
     public function runIndex(){
-
-        $library = Array('title'=>'Michael Vergason',
-                         'keywords'=>'Michael, Vergason, vergason, ipad,os',
-                          'description'=>'Michael Vergason');
+        $library = Array('title'=>'Seed Framework 0.1',
+                         'keywords'=>'Seed Framework, seed, framework, ipad,os',
+                          'description'=>'Seed Framework');
         $template = file_get_contents('app/site/index.html');
         foreach ($library as $key => $value) {
              $template = str_replace('{'.$key.'}', $value, $template);
